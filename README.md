@@ -38,7 +38,9 @@ the advantages of this approach:
 ## Design Decisions
 
 in my implementation, the backend completely manages the questionnaire's logic and stores its state, which is defined in `questionnaire.ts`.
+
 in order to go to next step, go back, reset and get current screen, the frontend needs to call backend.
+
 the backend instantiates questionnaire instance and its inner classes/objects based on config (`sampleQuestionaire.json`).
 
-the frontend asks for currently displayed screen information (ttile+input) and once user enters/selects value, the frontend passes the value to backend and gets the screen of next step.
+the frontend asks for currently displayed screen information (title+input) and once user enters/selects value, the frontend passes the value to backend and gets the screen of next step.
