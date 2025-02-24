@@ -29,9 +29,9 @@ every time the user chooses/enters value, it will be added (under `assignPath`) 
 the `path` value inside a valuator does have access to the whole state and to every field/value that was assigned in previous steps.
 
 the advantages of this approach:
-1. decoupling between screens and steps allows reusing of same screen in multiple steps
+1. decoupling between screens and steps allows reusing of same screen in multiple steps.
 2. it is possible to define branching logic of questionnaire's flow depending on values that were entered in previous steps.
-3. even if it is possible to define flexible (and even circular) flows where the progress (steps done/(all steps)) is not clear in advance, it is still possible sometimes calculate progress
+3. even if it is possible to define flexible (and even circular) flows where the progress (steps done/(all steps)) is not clear in advance, it is still sometimes possible to calculate progress.
 4. it is easy to add new functionalities (more inputs in screen, more conditions, different field assignment logic)
 
 
