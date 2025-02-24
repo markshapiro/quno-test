@@ -1,4 +1,3 @@
-
 ## Run Backend
 
 ```
@@ -14,7 +13,6 @@ cd quno-test-frontend
 yarn install
 npm run dev
 ```
-
 frontend will run on `http://localhost:5173/`
 
 ## Schema Structure
@@ -35,3 +33,12 @@ the advantages of this approach:
 2. it is possible to define branching logic of questionnaire's flow depending on values that were entered in previous steps.
 3. even if it is possible to define flexible (and even circular) flows where the progress (steps done/(all steps)) is not clear in advance, it is still possible sometimes calculate progress
 4. it is easy to add new functionalities (more inputs in screen, more conditions, different field assignment logic)
+
+
+## Design Decisions
+
+in my implementation, the backend completely manages the questionnaire's logic and stores its state, which is defined in `questionnaire.ts`.
+in order to go to next step, go back, reset and get current screen, the frontend needs to call backend.
+the backend instantiates questionnaire instance and its inner classes/objects based on config (`sampleQuestionaire.json`).
+
+the frontend asks for currently displayed screen information (ttile+input) and once user enters/selects value, the frontend passes the value to backend and gets the screen of next step.
